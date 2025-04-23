@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>Test Login Screen</description>
+        <direct>false</direct>
+        <endpoint>x_1033830_servicen_Login_screen.do</endpoint>
+        <html><![CDATA[<jelly>
+  <html>
+    <head>
+      <title>Custom Login</title>
+      <script>
+        function doLogin() {
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+
+          if (!username || !password) {
+            alert("Please enter both username and password.");
+            return;
+          }
+
+          // Simulated login - for real logic, use GlideAjax or redirect to actual auth
+          if (username === "admin") {
+            alert("Login successful!");
+            window.location = "home.do"; // Redirect to home
+          } else {
+            alert("Invalid credentials!");
+          }
+        }
+      </script>
+      <style>
+        .login-box {
+          width: 300px;
+          margin: 100px auto;
+          padding: 30px;
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+          text-align: center;
+        }
+        input {
+          width: 90%;
+          padding: 10px;
+          margin: 10px 0;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <br />
+        <input type="password" id="password" placeholder="Password" />
+        <br />
+        <button onclick="doLogin()">Login</button>
+      </div>
+    </body>
+  </html>
+</jelly>
+]]></html>
+        <name>Login_screen</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>renuka</sys_created_by>
+        <sys_created_on>2025-04-23 07:56:37</sys_created_on>
+        <sys_id>d5dbea825389621044d355e0a0490e76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Login_screen</sys_name>
+        <sys_package display_value="servicenow_basics" source="x_1033830_servicen">f1276ac65349621044d355e0a0490e5c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="servicenow_basics">f1276ac65349621044d355e0a0490e5c</sys_scope>
+        <sys_update_name>sys_ui_page_d5dbea825389621044d355e0a0490e76</sys_update_name>
+        <sys_updated_by>renuka</sys_updated_by>
+        <sys_updated_on>2025-04-23 07:56:37</sys_updated_on>
+    </sys_ui_page>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d5dbea825389621044d355e0a0490e76</id>
+        <sys_created_by>renuka</sys_created_by>
+        <sys_created_on>2025-04-23 07:55:31</sys_created_on>
+        <sys_id>8351fec25389621044d355e0a0490e18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>renuka</sys_updated_by>
+        <sys_updated_on>2025-04-23 07:55:31</sys_updated_on>
+        <table>sys_ui_page</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
